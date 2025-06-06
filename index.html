@@ -223,31 +223,113 @@
     </ul>
   </section>
 
- <section id="subdivisions">
+<section id="subdivisions">
   <h2>Major Subdivisions of Psychology</h2>
   <p>This section covers key areas such as abnormal, cognitive, developmental, health, and forensic psychology, each contributing to our understanding of behaviour in different contexts.</p>
-  <img src="https://cdn.pixabay.com/photo/2016/11/23/18/02/brain-1850131_1280.jpg" alt="Brain Illustration" style="width:100%; max-width:600px; border-radius:8px;" />
+  <img src="https://cdn.pixabay.com/photo/2016/11/23/18/02/brain-1850131_1280.jpg" alt="Brain Illustration" style="width:100%; max-width:600px;" />
 
   <ul style="list-style-type:none; padding-left:0;">
     <li>
-      <button class="toggle-btn" aria-expanded="false" aria-controls="abnormal-content" id="abnormal-btn"><strong>Abnormal Psychology</strong></button>
-      <div id="abnormal-content" class="toggle-content" role="region" aria-labelledby="abnormal-btn" hidden>
+      <button class="toggle-btn"><strong>Abnormal Psychology</strong></button>
+      <div class="toggle-content">
         <p>Abnormal psychology focuses on psychological disorders and other abnormal psychological phenomena. Psychologists investigate the nature, incidence, causes, treatment, and prevention of psychological disorders, aiming to understand and alleviate mental illness.</p>
       </div>
     </li>
+
     <li>
-      <button class="toggle-btn" aria-expanded="false" aria-controls="cognitive-content" id="cognitive-btn"><strong>Cognitive Psychology</strong></button>
-      <div id="cognitive-content" class="toggle-content" role="region" aria-labelledby="cognitive-btn" hidden>
+      <button class="toggle-btn"><strong>Cognitive Psychology</strong></button>
+      <div class="toggle-content">
         <p>This branch studies mental processes such as sensing, perceiving, remembering, forgetting, thinking, decision-making, reasoning, and problem-solving. Cognitive psychologists explore how information is presented and processed in the mind, providing insight into how the mind works.</p>
       </div>
     </li>
+
     <li>
-      <button class="toggle-btn" aria-expanded="false" aria-controls="community-content" id="community-btn"><strong>Community Psychology</strong></button>
-      <div id="community-content" class="toggle-content" role="region" aria-labelledby="community-btn" hidden>
-        <p>Community psychology emphasizes social factors affecting mental health, focusing on prevention and community interventions rather than treatment. It explores social change, advocacy, and empowerment within diverse communities.</p>
+      <button class="toggle-btn"><strong>Community Psychology</strong></button>
+      <div class="toggle-content">
+        <p>Community psychology seeks to understand factors influencing normal and abnormal behaviour in natural settings like homes, workplaces, and neighbourhoods. It focuses on groups or communities and works toward promoting health and preventing psychological disorders.</p>
+      </div>
+    </li>
+
+    <li>
+      <button class="toggle-btn"><strong>Developmental Psychology</strong></button>
+      <div class="toggle-content">
+        <p>Developmental psychology examines human development across the lifespan, from prenatal stages to old age. It investigates age-related changes in behaviour and stages of physical, emotional, cognitive, social, and moral development.</p>
+      </div>
+    </li>
+
+    <li>
+      <button class="toggle-btn"><strong>Environmental Psychology</strong></button>
+      <div class="toggle-content">
+        <p>This field studies the relationship between psychological processes and physical environments, including homes, offices, urban areas, and regions. Researchers investigate people’s attitudes toward environments and concepts like personal space.</p>
+      </div>
+    </li>
+
+    <li>
+      <button class="toggle-btn"><strong>Forensic Psychology</strong></button>
+      <div class="toggle-content">
+        <p>Forensic psychology applies psychological knowledge to legal issues, including assisting law enforcement with suspect profiling, providing expert testimony, and assessing reports in criminal and civil trials. It is a relatively new but growing field in South Africa.</p>
+      </div>
+    </li>
+
+    <li>
+      <button class="toggle-btn"><strong>Health Psychology</strong></button>
+      <div class="toggle-content">
+        <p>Health psychology focuses on psychology’s role in promoting good health, preventing illness, and managing health conditions. Health psychologists design programs to help individuals stop smoking, manage stress, lose weight, and lead healthier lives.</p>
+      </div>
+    </li>
+
+    <li>
+      <button class="toggle-btn"><strong>Neuropsychology</strong></button>
+      <div class="toggle-content">
+        <p>Neuropsychology studies the biological basis of behaviour, thoughts, and emotions. Neuropsychologists evaluate, diagnose, and rehabilitate individuals with disorders of the central nervous system, focusing on brain-behaviour relationships.</p>
+      </div>
+    </li>
+
+    <li>
+      <button class="toggle-btn"><strong>Sport Psychology</strong></button>
+      <div class="toggle-content">
+        <p>Sport psychology investigates psychological factors related to physical exercise and sports performance. Topics include motivation, team dynamics, arousal, aggression, injury recovery, and mental preparation for peak performance.</p>
       </div>
     </li>
   </ul>
+
+  <style>
+    .toggle-content {
+      display: none;
+      margin-top: 0.5em;
+      margin-bottom: 1em;
+      padding-left: 1em;
+      border-left: 3px solid #a83279; /* cherry blossom-like color */
+      color: #333;
+    }
+    .toggle-btn {
+      background: none;
+      border: none;
+      color: #a83279;
+      font-size: 1.1em;
+      cursor: pointer;
+      text-align: left;
+      padding: 0;
+      margin-bottom: 0.3em;
+      font-weight: bold;
+    }
+    .toggle-btn:hover {
+      text-decoration: underline;
+    }
+  </style>
+
+  <script>
+    document.querySelectorAll('.toggle-btn').forEach(button => {
+      button.addEventListener('click', () => {
+        const content = button.nextElementSibling;
+        if (content.style.display === 'block') {
+          content.style.display = 'none';
+        } else {
+          content.style.display = 'block';
+        }
+      });
+    });
+  </script>
 </section>
 
 <section id="categories">
