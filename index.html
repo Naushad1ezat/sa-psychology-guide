@@ -223,66 +223,107 @@
     </ul>
   </section>
 
-  <section id="subdivisions">
-    <h2>Major Subdivisions of Psychology</h2>
-    <p>This section covers key areas such as abnormal, cognitive, developmental, health, and forensic psychology, each contributing to our understanding of behaviour in different contexts.</p>
-    <img src="https://cdn.pixabay.com/photo/2016/11/23/18/02/brain-1850131_1280.jpg" alt="Brain Illustration" style="width:100%; max-width:600px; border-radius:8px;" />
+ <section id="subdivisions">
+  <h2>Major Subdivisions of Psychology</h2>
+  <p>This section covers key areas such as abnormal, cognitive, developmental, health, and forensic psychology, each contributing to our understanding of behaviour in different contexts.</p>
+  <img src="https://cdn.pixabay.com/photo/2016/11/23/18/02/brain-1850131_1280.jpg" alt="Brain Illustration" style="width:100%; max-width:600px; border-radius:8px;" />
 
-    <ul style="list-style-type:none; padding-left:0;">
-      <li>
-        <button class="toggle-btn" aria-expanded="false" aria-controls="abnormal-content" id="abnormal-btn"><strong>Abnormal Psychology</strong></button>
-        <div id="abnormal-content" class="toggle-content" role="region" aria-labelledby="abnormal-btn">
-          <p>Abnormal psychology focuses on psychological disorders and other abnormal psychological phenomena. Psychologists investigate the nature, incidence, causes, treatment, and prevention of psychological disorders, aiming to understand and alleviate mental illness.</p>
-        </div>
-      </li>
+  <ul style="list-style-type:none; padding-left:0;">
+    <li>
+      <button class="toggle-btn" aria-expanded="false" aria-controls="abnormal-content" id="abnormal-btn"><strong>Abnormal Psychology</strong></button>
+      <div id="abnormal-content" class="toggle-content" role="region" aria-labelledby="abnormal-btn" hidden>
+        <p>Abnormal psychology focuses on psychological disorders and other abnormal psychological phenomena. Psychologists investigate the nature, incidence, causes, treatment, and prevention of psychological disorders, aiming to understand and alleviate mental illness.</p>
+      </div>
+    </li>
+    <li>
+      <button class="toggle-btn" aria-expanded="false" aria-controls="cognitive-content" id="cognitive-btn"><strong>Cognitive Psychology</strong></button>
+      <div id="cognitive-content" class="toggle-content" role="region" aria-labelledby="cognitive-btn" hidden>
+        <p>This branch studies mental processes such as sensing, perceiving, remembering, forgetting, thinking, decision-making, reasoning, and problem-solving. Cognitive psychologists explore how information is presented and processed in the mind, providing insight into how the mind works.</p>
+      </div>
+    </li>
+    <li>
+      <button class="toggle-btn" aria-expanded="false" aria-controls="community-content" id="community-btn"><strong>Community Psychology</strong></button>
+      <div id="community-content" class="toggle-content" role="region" aria-labelledby="community-btn" hidden>
+        <p>Community psychology emphasizes social factors affecting mental health, focusing on prevention and community interventions rather than treatment. It explores social change, advocacy, and empowerment within diverse communities.</p>
+      </div>
+    </li>
+  </ul>
+</section>
 
-      <li>
-        <button class="toggle-btn" aria-expanded="false" aria-controls="cognitive-content" id="cognitive-btn"><strong>Cognitive Psychology</strong></button>
-        <div id="cognitive-content" class="toggle-content" role="region" aria-labelledby="cognitive-btn">
-          <p>This branch studies mental processes such as sensing, perceiving, remembering, forgetting, thinking, decision-making, reasoning, and problem-solving. Cognitive psychologists explore how information is presented and processed in the mind, providing insight into how the mind works.</p>
-        </div>
-      </li>
+<section id="categories">
+  <h2>Other Psychology Categories</h2>
+  <p>Psychology encompasses a variety of fields including clinical, developmental, health, educational, forensic, and social psychology. Each category addresses specific aspects of behaviour and mental processes.</p>
 
-      <li>
-        <button class="toggle-btn" aria-expanded="false" aria-controls="community-content" id="community-btn"><strong>Community Psychology</strong></button>
-        <div id="community-content" class="toggle-content" role="region" aria-labelledby="community-btn">
-          <p>Community psychology emphasizes social factors affecting mental health, focusing on prevention and community interventions rather than treatment. It explores social change, advocacy, and empowerment within diverse communities.</p>
-        </div>
-      </li>
-    </ul>
-  </section>
+  <table>
+    <thead>
+      <tr>
+        <th>Category</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <button class="toggle-btn" aria-expanded="false" aria-controls="clinical-content" id="clinical-btn"><strong>Clinical Psychology</strong></button>
+        </td>
+        <td>
+          <div id="clinical-content" class="toggle-content" role="region" aria-labelledby="clinical-btn" hidden>
+            Focuses on diagnosing and treating mental disorders.
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button class="toggle-btn" aria-expanded="false" aria-controls="educational-content" id="educational-btn"><strong>Educational Psychology</strong></button>
+        </td>
+        <td>
+          <div id="educational-content" class="toggle-content" role="region" aria-labelledby="educational-btn" hidden>
+            Studies how people learn and improve educational processes.
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button class="toggle-btn" aria-expanded="false" aria-controls="health-content" id="health-btn"><strong>Health Psychology</strong></button>
+        </td>
+        <td>
+          <div id="health-content" class="toggle-content" role="region" aria-labelledby="health-btn" hidden>
+            Explores psychological influences on physical health.
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button class="toggle-btn" aria-expanded="false" aria-controls="forensic-content" id="forensic-btn"><strong>Forensic Psychology</strong></button>
+        </td>
+        <td>
+          <div id="forensic-content" class="toggle-content" role="region" aria-labelledby="forensic-btn" hidden>
+            Applies psychology to legal issues and the justice system.
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>
 
-  <section id="categories">
-    <h2>Other Psychology Categories</h2>
-    <p>Psychology encompasses a variety of fields including clinical, developmental, health, educational, forensic, and social psychology. Each category addresses specific aspects of behaviour and mental processes.</p>
+<script>
+  // Toggle content accessibility script
+  document.querySelectorAll('.toggle-btn').forEach(button => {
+    button.addEventListener('click', () => {
+      const contentId = button.getAttribute('aria-controls');
+      const content = document.getElementById(contentId);
+      const isExpanded = button.getAttribute('aria-expanded') === 'true';
 
-    <table>
-      <thead>
-        <tr>
-          <th>Category</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Clinical Psychology</td>
-          <td>Focuses on diagnosing and treating mental disorders.</td>
-        </tr>
-        <tr>
-          <td>Educational Psychology</td>
-          <td>Studies how people learn and improve educational processes.</td>
-        </tr>
-        <tr>
-          <td>Health Psychology</td>
-          <td>Explores psychological influences on physical health.</td>
-        </tr>
-        <tr>
-          <td>Forensic Psychology</td>
-          <td>Applies psychology to legal issues and the justice system.</td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
+      if (isExpanded) {
+        button.setAttribute('aria-expanded', 'false');
+        content.hidden = true;
+      } else {
+        button.setAttribute('aria-expanded', 'true');
+        content.hidden = false;
+      }
+    });
+  });
+</script>
 
   <section id="compare">
     <h2>Comparing Related Disciplines</h2>
