@@ -293,114 +293,41 @@
     </li>
   </ul>
 
-  <style>
-.toggle-content[hidden] {
-  display: none;
-}
-      margin-top: 0.5em;
-      margin-bottom: 1em;
-      padding-left: 1em;
-      border-left: 3px solid #a83279; /* cherry blossom-like color */
-      color: #333;
-    }
-    .toggle-btn {
-      background: none;
-      border: none;
-      color: #a83279;
-      font-size: 1.1em;
-      cursor: pointer;
-      text-align: left;
-      padding: 0;
-      margin-bottom: 0.3em;
-      font-weight: bold;
-    }
-    .toggle-btn:hover {
-      text-decoration: underline;
-    }
-  </style>
-
-  <script>
-document.querySelectorAll('.toggle-btn').forEach(button => {
-  button.addEventListener('click', () => {
-    const contentId = button.getAttribute('aria-controls');
-    const content = document.getElementById(contentId);
-    if (!content) return;
-
-    const isExpanded = button.getAttribute('aria-expanded') === 'true';
-    if (isExpanded) {
-      button.setAttribute('aria-expanded', 'false');
-      content.hidden = true;
-    } else {
-      button.setAttribute('aria-expanded', 'true');
-      content.hidden = false;
-    }
-  });
-});
-  </script>
-</section>
-
-<section id="registration-categories">
-  <h2>Registration Categories in South Africa</h2>
-  <p>South African psychologists must register with the HPCSA under one of several categories.</p>
-
-  <ul style="list-style-type:none; padding-left:0;">
-    <li>
-      <button class="toggle-btn" aria-expanded="false" aria-controls="clinical-reg-content" id="clinical-reg-btn"><strong>Clinical Psychologist</strong></button>
-      <div id="clinical-reg-content" class="toggle-content" role="region" aria-labelledby="clinical-reg-btn" hidden>
-        <p>Diagnoses and treats mental health issues.</p>
-      </div>
-    </li>
-    <li>
-      <button class="toggle-btn" aria-expanded="false" aria-controls="counselling-reg-content" id="counselling-reg-btn"><strong>Counselling Psychologist</strong></button>
-      <div id="counselling-reg-content" class="toggle-content" role="region" aria-labelledby="counselling-reg-btn" hidden>
-        <p>Helps individuals adjust and cope.</p>
-      </div>
-    </li>
-    <li>
-      <button class="toggle-btn" aria-expanded="false" aria-controls="educational-reg-content" id="educational-reg-btn"><strong>Educational Psychologist</strong></button>
-      <div id="educational-reg-content" class="toggle-content" role="region" aria-labelledby="educational-reg-btn" hidden>
-        <p>Focus on learners and development.</p>
-      </div>
-    </li>
-    <li>
-      <button class="toggle-btn" aria-expanded="false" aria-controls="forensic-reg-content" id="forensic-reg-btn"><strong>Forensic Psychologist</strong></button>
-      <div id="forensic-reg-content" class="toggle-content" role="region" aria-labelledby="forensic-reg-btn" hidden>
-        <p>Works in legal settings.</p>
-      </div>
-    </li>
-    <li>
-      <button class="toggle-btn" aria-expanded="false" aria-controls="industrial-reg-content" id="industrial-reg-btn"><strong>Industrial/Organisational Psychologist</strong></button>
-      <div id="industrial-reg-content" class="toggle-content" role="region" aria-labelledby="industrial-reg-btn" hidden>
-        <p>Workplace behaviour specialist.</p>
-      </div>
-    </li>
-    <li>
-      <button class="toggle-btn" aria-expanded="false" aria-controls="neuro-reg-content" id="neuro-reg-btn"><strong>Neuropsychologist</strong></button>
-      <div id="neuro-reg-content" class="toggle-content" role="region" aria-labelledby="neuro-reg-btn" hidden>
-        <p>Assesses and rehabilitates brain function.</p>
-      </div>
-    </li>
-    <li>
-      <button class="toggle-btn" aria-expanded="false" aria-controls="research-reg-content" id="research-reg-btn"><strong>Research Psychologist</strong></button>
-      <div id="research-reg-content" class="toggle-content" role="region" aria-labelledby="research-reg-btn" hidden>
-        <p>Conducts studies on human behaviour.</p>
-      </div>
-    </li>
-  </ul>
-
-  <p>
-    Visit the <a href="https://www.hpcsa.co.za" target="_blank" rel="noopener noreferrer">HPCSA website</a> to learn more.
-  </p>
-</section>
+<style>
+  .toggle-content[hidden] {
+    display: none;
+  }
+  .toggle-content {
+    margin-top: 0.5em;
+    margin-bottom: 1em;
+    padding-left: 1em;
+    border-left: 3px solid #a83279; /* cherry blossom-like color */
+    color: #333;
+  }
+  .toggle-btn {
+    background: none;
+    border: none;
+    color: #a83279;
+    font-size: 1.1em;
+    cursor: pointer;
+    text-align: left;
+    padding: 0;
+    margin-bottom: 0.3em;
+    font-weight: bold;
+  }
+  .toggle-btn:hover {
+    text-decoration: underline;
+  }
+</style>
 
 <script>
-  // Reuse the same toggle script or add if not present
   document.querySelectorAll('.toggle-btn').forEach(button => {
     button.addEventListener('click', () => {
       const contentId = button.getAttribute('aria-controls');
       const content = document.getElementById(contentId);
-      const isExpanded = button.getAttribute('aria-expanded') === 'true';
+      if (!content) return;
 
+      const isExpanded = button.getAttribute('aria-expanded') === 'true';
       if (isExpanded) {
         button.setAttribute('aria-expanded', 'false');
         content.hidden = true;
@@ -412,6 +339,121 @@ document.querySelectorAll('.toggle-btn').forEach(button => {
   });
 </script>
 
+</section>
+
+<section id="registration-categories">
+  <h2>Registration Categories in South Africa</h2>
+  <p>South African psychologists must register with the HPCSA under one of several categories.</p>
+
+  <ul style="list-style-type:none; padding-left:0;">
+    <li>
+      <button class="toggle-btn" aria-expanded="false" aria-controls="clinical-reg-content" id="clinical-reg-btn">
+        <strong>Clinical Psychologist</strong>
+      </button>
+      <div id="clinical-reg-content" class="toggle-content" role="region" aria-labelledby="clinical-reg-btn" hidden>
+        <p>Diagnoses and treats mental health issues.</p>
+      </div>
+    </li>
+    <li>
+      <button class="toggle-btn" aria-expanded="false" aria-controls="counselling-reg-content" id="counselling-reg-btn">
+        <strong>Counselling Psychologist</strong>
+      </button>
+      <div id="counselling-reg-content" class="toggle-content" role="region" aria-labelledby="counselling-reg-btn" hidden>
+        <p>Helps individuals adjust and cope.</p>
+      </div>
+    </li>
+    <li>
+      <button class="toggle-btn" aria-expanded="false" aria-controls="educational-reg-content" id="educational-reg-btn">
+        <strong>Educational Psychologist</strong>
+      </button>
+      <div id="educational-reg-content" class="toggle-content" role="region" aria-labelledby="educational-reg-btn" hidden>
+        <p>Focus on learners and development.</p>
+      </div>
+    </li>
+    <li>
+      <button class="toggle-btn" aria-expanded="false" aria-controls="forensic-reg-content" id="forensic-reg-btn">
+        <strong>Forensic Psychologist</strong>
+      </button>
+      <div id="forensic-reg-content" class="toggle-content" role="region" aria-labelledby="forensic-reg-btn" hidden>
+        <p>Works in legal settings.</p>
+      </div>
+    </li>
+    <li>
+      <button class="toggle-btn" aria-expanded="false" aria-controls="industrial-reg-content" id="industrial-reg-btn">
+        <strong>Industrial/Organisational Psychologist</strong>
+      </button>
+      <div id="industrial-reg-content" class="toggle-content" role="region" aria-labelledby="industrial-reg-btn" hidden>
+        <p>Workplace behaviour specialist.</p>
+      </div>
+    </li>
+    <li>
+      <button class="toggle-btn" aria-expanded="false" aria-controls="neuro-reg-content" id="neuro-reg-btn">
+        <strong>Neuropsychologist</strong>
+      </button>
+      <div id="neuro-reg-content" class="toggle-content" role="region" aria-labelledby="neuro-reg-btn" hidden>
+        <p>Assesses and rehabilitates brain function.</p>
+      </div>
+    </li>
+    <li>
+      <button class="toggle-btn" aria-expanded="false" aria-controls="research-reg-content" id="research-reg-btn">
+        <strong>Research Psychologist</strong>
+      </button>
+      <div id="research-reg-content" class="toggle-content" role="region" aria-labelledby="research-reg-btn" hidden>
+        <p>Conducts studies on human behaviour.</p>
+      </div>
+    </li>
+  </ul>
+
+  <p>
+    Visit the <a href="https://www.hpcsa.co.za" target="_blank" rel="noopener noreferrer">HPCSA website</a> to learn more.
+  </p>
+</section>
+
+<style>
+  .toggle-content[hidden] {
+    display: none;
+  }
+  .toggle-content {
+    margin-top: 0.5em;
+    margin-bottom: 1em;
+    padding-left: 1em;
+    border-left: 3px solid #a83279; /* cherry blossom-like color */
+    color: #333;
+  }
+  .toggle-btn {
+    background: none;
+    border: none;
+    color: #a83279;
+    font-size: 1.1em;
+    cursor: pointer;
+    text-align: left;
+    padding: 0;
+    margin-bottom: 0.3em;
+    font-weight: bold;
+  }
+  .toggle-btn:hover {
+    text-decoration: underline;
+  }
+</style>
+
+<script>
+  document.querySelectorAll('.toggle-btn').forEach(button => {
+    button.addEventListener('click', () => {
+      const contentId = button.getAttribute('aria-controls');
+      const content = document.getElementById(contentId);
+      if (!content) return;
+
+      const isExpanded = button.getAttribute('aria-expanded') === 'true';
+      if (isExpanded) {
+        button.setAttribute('aria-expanded', 'false');
+        content.hidden = true;
+      } else {
+        button.setAttribute('aria-expanded', 'true');
+        content.hidden = false;
+      }
+    });
+  });
+</script>
 
   <section id="compare">
     <h2>Comparing Related Disciplines</h2>
