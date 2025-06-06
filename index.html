@@ -110,38 +110,22 @@
       outline: none;
     }
 
-    /* Toggle sections */
-    .toggle-content {
-      max-height: 0;
-      overflow: hidden;
-      margin-top: 0;
-      margin-bottom: 1em;
-      padding-left: 1em;
-      border-left: 3px solid #a83279;
-      color: #333;
-      transition: max-height 0.35s ease, margin-top 0.35s ease;
-    }
-    .toggle-btn {
-      background: none;
-      border: none;
-      color: #a83279;
-      font-size: 1.1em;
-      cursor: pointer;
-      text-align: left;
-      padding: 0;
-      margin-bottom: 0.3em;
-      font-weight: bold;
-      width: 100%;
-    }
-    .toggle-btn:hover,
-    .toggle-btn:focus {
-      text-decoration: underline;
-      outline: none;
-    }
-    .toggle-content.show {
-      max-height: 500px; /* enough height for content */
-      margin-top: 0.5em;
-    }
+.toggle-content {
+  max-height: 0;
+  overflow: hidden;
+  margin-top: 0;
+  margin-bottom: 1em;
+  padding-left: 1em;
+  border-left: 3px solid #a83279;
+  color: #333;
+  transition: max-height 0.35s ease, margin-top 0.35s ease;
+}
+
+.toggle-content.show {
+  max-height: 500px;
+  margin-top: 0.5em;
+}
+
 
     /* Table styling */
     table {
