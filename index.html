@@ -170,17 +170,32 @@
   <section id="quiz">
     <h2>Psychology Quiz</h2>
     <div class="quiz-container">
-      <form id="quizForm">
-        <!-- Placeholder for dynamically generated questions -->
-      </form>
+      <form id="quizForm"></form>
       <button onclick="submitQuiz()">Submit Quiz</button>
       <p id="quizResult"></p>
     </div>
     <script>
       const questions = [
-        { q: "Which branch studies thinking and problem-solving?", o: ["Abnormal", "Cognitive", "Forensic", "Social"], a: 1 },
-        { q: "Who can prescribe medication?", o: ["Psychologist", "Social Worker", "Psychiatrist", "Counselling Psychologist"], a: 2 },
-        // ... Add more up to 20 questions here ...
+        { q: "What is the primary focus of psychology?", o: ["Group behavior", "Individual experience", "Cultural traditions", "Environmental policy"], a: 1 },
+        { q: "Which method does psychology rely on?", o: ["Authority", "Scientific method", "Tradition", "Speculation"], a: 1 },
+        { q: "Who is allowed to prescribe medication?", o: ["Psychologist", "Social Worker", "Psychiatrist", "Educational Psychologist"], a: 2 },
+        { q: "What is a goal of psychology?", o: ["Predict behavior", "Ignore feelings", "Cure diseases", "Avoid research"], a: 0 },
+        { q: "Which branch studies thinking and decision-making?", o: ["Social", "Cognitive", "Abnormal", "Sport"], a: 1 },
+        { q: "Which subdivision deals with work roles and career issues?", o: ["Sport", "Forensic", "Career", "Developmental"], a: 2 },
+        { q: "What does abnormal psychology study?", o: ["Healthy habits", "Group dynamics", "Mental disorders", "Dream analysis"], a: 2 },
+        { q: "What does neuropsychology focus on?", o: ["Spirituality", "The environment", "The brain", "Economics"], a: 2 },
+        { q: "What do community psychologists usually work with?", o: ["Individuals", "Laboratories", "Groups or communities", "Prisons"], a: 2 },
+        { q: "Which category involves learners and school systems?", o: ["Clinical", "Educational", "Forensic", "Pastoral"], a: 1 },
+        { q: "Which psychologist works in law enforcement?", o: ["Cognitive", "Forensic", "Neuro", "Counselling"], a: 1 },
+        { q: "Which psychologist helps employees and employers?", o: ["Sport", "Organisational", "Pastoral", "Clinical"], a: 1 },
+        { q: "Which branch helps with loss and faith struggles?", o: ["Environmental", "Personality", "Pastoral", "Developmental"], a: 2 },
+        { q: "What does social psychology explore?", o: ["Brain damage", "Religious faith", "Cultural rituals", "Social influence"], a: 3 },
+        { q: "What is the difference between a psychologist and psychiatrist?", o: ["Psychiatrists use counselling", "Psychologists do surgery", "Psychiatrists are medical doctors", "Psychologists prescribe medicine"], a: 2 },
+        { q: "Which psychologist studies personality traits?", o: ["Health", "Personality", "Community", "Educational"], a: 1 },
+        { q: "Which branch handles the assessment of individual traits?", o: ["Psychological Evaluation", "Abnormal", "Developmental", "Health"], a: 0 },
+        { q: "Which psychologist promotes healthy living?", o: ["Environmental", "Health", "Forensic", "Clinical"], a: 1 },
+        { q: "Where do research psychologists often work?", o: ["Hospitals", "Prisons", "Laboratories and universities", "Gyms"], a: 2 },
+        { q: "What pass rate is needed to succeed in this quiz?", o: ["50%", "60%", "70%", "80%"], a: 3 }
       ];
 
       const quizForm = document.getElementById("quizForm");
@@ -201,7 +216,7 @@
         });
         const result = document.getElementById("quizResult");
         const pass = score >= Math.ceil(questions.length * 0.8);
-        result.innerHTML = `You scored ${score}/${questions.length}. ${pass ? "Pass" : "Fail"}`;
+        result.innerHTML = `You scored ${score}/${questions.length}. ${pass ? "Pass ✅" : "Fail ❌"}`;
       }
     </script>
   </section>
@@ -212,3 +227,4 @@
 </body>
 
 </html>
+
