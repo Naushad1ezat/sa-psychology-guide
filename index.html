@@ -339,64 +339,62 @@ document.querySelectorAll('.toggle-btn').forEach(button => {
   </script>
 </section>
 
-<section id="categories">
-  <h2>Other Psychology Categories</h2>
-  <p>Psychology encompasses a variety of fields including clinical, developmental, health, educational, forensic, and social psychology. Each category addresses specific aspects of behaviour and mental processes.</p>
+<section id="registration-categories">
+  <h2>Registration Categories in South Africa</h2>
+  <p>South African psychologists must register with the HPCSA under one of several categories.</p>
 
-  <table>
-    <thead>
-      <tr>
-        <th>Category</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>
-          <button class="toggle-btn" aria-expanded="false" aria-controls="clinical-content" id="clinical-btn"><strong>Clinical Psychology</strong></button>
-        </td>
-        <td>
-          <div id="clinical-content" class="toggle-content" role="region" aria-labelledby="clinical-btn" hidden>
-            Focuses on diagnosing and treating mental disorders.
-          </div>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <button class="toggle-btn" aria-expanded="false" aria-controls="educational-content" id="educational-btn"><strong>Educational Psychology</strong></button>
-        </td>
-        <td>
-          <div id="educational-content" class="toggle-content" role="region" aria-labelledby="educational-btn" hidden>
-            Studies how people learn and improve educational processes.
-          </div>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <button class="toggle-btn" aria-expanded="false" aria-controls="health-content" id="health-btn"><strong>Health Psychology</strong></button>
-        </td>
-        <td>
-          <div id="health-content" class="toggle-content" role="region" aria-labelledby="health-btn" hidden>
-            Explores psychological influences on physical health.
-          </div>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <button class="toggle-btn" aria-expanded="false" aria-controls="forensic-content" id="forensic-btn"><strong>Forensic Psychology</strong></button>
-        </td>
-        <td>
-          <div id="forensic-content" class="toggle-content" role="region" aria-labelledby="forensic-btn" hidden>
-            Applies psychology to legal issues and the justice system.
-          </div>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <ul style="list-style-type:none; padding-left:0;">
+    <li>
+      <button class="toggle-btn" aria-expanded="false" aria-controls="clinical-reg-content" id="clinical-reg-btn"><strong>Clinical Psychologist</strong></button>
+      <div id="clinical-reg-content" class="toggle-content" role="region" aria-labelledby="clinical-reg-btn" hidden>
+        <p>Diagnoses and treats mental health issues.</p>
+      </div>
+    </li>
+    <li>
+      <button class="toggle-btn" aria-expanded="false" aria-controls="counselling-reg-content" id="counselling-reg-btn"><strong>Counselling Psychologist</strong></button>
+      <div id="counselling-reg-content" class="toggle-content" role="region" aria-labelledby="counselling-reg-btn" hidden>
+        <p>Helps individuals adjust and cope.</p>
+      </div>
+    </li>
+    <li>
+      <button class="toggle-btn" aria-expanded="false" aria-controls="educational-reg-content" id="educational-reg-btn"><strong>Educational Psychologist</strong></button>
+      <div id="educational-reg-content" class="toggle-content" role="region" aria-labelledby="educational-reg-btn" hidden>
+        <p>Focus on learners and development.</p>
+      </div>
+    </li>
+    <li>
+      <button class="toggle-btn" aria-expanded="false" aria-controls="forensic-reg-content" id="forensic-reg-btn"><strong>Forensic Psychologist</strong></button>
+      <div id="forensic-reg-content" class="toggle-content" role="region" aria-labelledby="forensic-reg-btn" hidden>
+        <p>Works in legal settings.</p>
+      </div>
+    </li>
+    <li>
+      <button class="toggle-btn" aria-expanded="false" aria-controls="industrial-reg-content" id="industrial-reg-btn"><strong>Industrial/Organisational Psychologist</strong></button>
+      <div id="industrial-reg-content" class="toggle-content" role="region" aria-labelledby="industrial-reg-btn" hidden>
+        <p>Workplace behaviour specialist.</p>
+      </div>
+    </li>
+    <li>
+      <button class="toggle-btn" aria-expanded="false" aria-controls="neuro-reg-content" id="neuro-reg-btn"><strong>Neuropsychologist</strong></button>
+      <div id="neuro-reg-content" class="toggle-content" role="region" aria-labelledby="neuro-reg-btn" hidden>
+        <p>Assesses and rehabilitates brain function.</p>
+      </div>
+    </li>
+    <li>
+      <button class="toggle-btn" aria-expanded="false" aria-controls="research-reg-content" id="research-reg-btn"><strong>Research Psychologist</strong></button>
+      <div id="research-reg-content" class="toggle-content" role="region" aria-labelledby="research-reg-btn" hidden>
+        <p>Conducts studies on human behaviour.</p>
+      </div>
+    </li>
+  </ul>
+
+  <p>
+    Visit the <a href="https://www.hpcsa.co.za" target="_blank" rel="noopener noreferrer">HPCSA website</a> to learn more.
+  </p>
 </section>
 
 <script>
-  // Toggle content accessibility script
+  // Reuse the same toggle script or add if not present
   document.querySelectorAll('.toggle-btn').forEach(button => {
     button.addEventListener('click', () => {
       const contentId = button.getAttribute('aria-controls');
@@ -413,6 +411,7 @@ document.querySelectorAll('.toggle-btn').forEach(button => {
     });
   });
 </script>
+
 
   <section id="compare">
     <h2>Comparing Related Disciplines</h2>
